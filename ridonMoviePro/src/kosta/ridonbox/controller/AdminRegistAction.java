@@ -16,7 +16,7 @@ import kosta.ridonbox.model.dto.MovieScreenDTO;
 import kosta.ridonbox.model.dto.TheaterDTO;
 import kosta.ridonbox.model.service.AdminService;
 import kosta.ridonbox.model.service.AdminServiceImpl;
-import net.sf.json.JSONArray;
+
 
 public class AdminRegistAction implements Action {
 
@@ -26,7 +26,7 @@ public class AdminRegistAction implements Action {
 		
 		System.out.println("어드민레지스트액션실행");
 		AdminService service = new AdminServiceImpl();
-		try {
+/*		try {
 			List<MovieScreenDTO> list=service.movieList();
 			List<TheaterDTO> tList= service.theaterList();
 			Map<String, List> map = new HashMap<>();
@@ -38,7 +38,7 @@ public class AdminRegistAction implements Action {
 			out.println(arr);
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
+		}*/
 		return null;
 	}
 

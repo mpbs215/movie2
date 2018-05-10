@@ -20,7 +20,7 @@ public class AdminMovieDeleteAction implements Action {
 		System.out.println(movieNum);
 		AdminService service = new AdminServiceImpl();
 		try {
-			service.movieDelete(movieNum);
+			int result = service.movieDelete(Integer.parseInt(movieNum));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

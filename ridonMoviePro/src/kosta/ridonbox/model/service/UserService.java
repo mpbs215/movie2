@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import kosta.ridonbox.model.dto.BookDTO;
+import kosta.ridonbox.model.dto.BookingDTO;
 import kosta.ridonbox.model.dto.EventDTO;
 import kosta.ridonbox.model.dto.MemberDTO;
 import kosta.ridonbox.model.dto.MovieDTO;
@@ -31,7 +32,7 @@ public interface UserService {
 	 * @return 1이면 아이디 중복, 0이면 사용가능
 	 * @throws SQLException
 	 */
-	public int checkById(String id) throws SQLException;
+	public String checkById(String id) throws SQLException;
 	
 	/**
 	 *메인페이지에서 BoxOffice순으로 영화보여줌.
@@ -86,7 +87,9 @@ public interface UserService {
 	 * @throws SQLException 
 	 * @throws List<BookDTO> (현 사용자의 예매 dto 리스트로 리턴)
 	 */
-	public List<BookDTO> memberbyBookList(String memberId) throws SQLException;
+	public List<BookingDTO> memberbyBookList(String memberId) throws SQLException;
+	
+	public int deleteByBooking(String revNum) throws SQLException;
 
 	int myPageByMemberUpdate(MemberDTO memberDTO) throws SQLException;
 
